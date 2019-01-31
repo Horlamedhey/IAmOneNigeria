@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iamonenigeria/pages/blog.dart';
-import 'package:iamonenigeria/pages/library.dart';
+import 'package:iamonenigeria/pages/liblog.dart';
 import 'package:iamonenigeria/pages/profile.dart';
 import 'package:iamonenigeria/pages/registration.dart';
 
@@ -147,7 +146,9 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           setState(() {
                             activeTabLabel = 'Blog';
-                            activeTab = Blog();
+                            activeTab = LibBlog(
+                              mode: 'Blog',
+                            );
                             Navigator.pop(context);
                           });
                         },
@@ -166,7 +167,9 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           setState(() {
                             activeTabLabel = 'Library';
-                            activeTab = Library();
+                            activeTab = LibBlog(
+                              mode: 'Library',
+                            );
                             Navigator.pop(context);
                           });
                         },
